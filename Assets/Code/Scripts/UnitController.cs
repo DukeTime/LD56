@@ -18,14 +18,10 @@ public class UnitController : MonoBehaviour
 
     void Update()
     {
-        //transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.y);
+        transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.y);
         if (stage == unitStage.idle)
         {
-            if(wanderPoint == null || (wanderPoint.x == transform.position.x && wanderPoint.y == transform.position.y))
-            {
-                wanderPoint = new Vector2(transform.position.x + Random.Range(-0.5f, 0.5f), transform.position.y + Random.Range(-0.5f, 0.5f));
-            }
-            rb.velocity = (wanderPoint - transform.position) * Time.deltaTime * 0.2f;
+            rb.velocity = (new Vector3(-1.5f, -2, transform.position.z) - transform.position) * Time.deltaTime * 200;
         }
         //if ()
     }
