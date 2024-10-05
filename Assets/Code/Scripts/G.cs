@@ -9,7 +9,13 @@ public class G : MonoBehaviour
     public static int unitLvl = 0;
     public static int lvl = 0;
 
-    public static GameObject[] ObjectsOnStage;
+    public static GameObject[] objectsOnStage;
+    public static GameObject unitPref;
 
-    //[SerializeField] private 
+    [SerializeField] private GameObject startUnitPref;
+
+    private void Start()
+    {
+        unitPref = startUnitPref;
+    }
 }
