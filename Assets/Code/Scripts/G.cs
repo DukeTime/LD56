@@ -21,6 +21,10 @@ public class G : MonoBehaviour
 
     private void Awake()
     {
+        money = 100;
+        unitCount = 0;
+        unitLvl = 1;
+        lvl = 1;
         if (Instance == null)
         {
             Instance = this;

@@ -20,7 +20,7 @@ public class GameUIController : UIController
     {
         counter.text = val.ToString();
         if (counter.transform.localScale == Vector3.one)
-            counter.transform.DOPunchScale(counter.transform.localScale + Vector3.one * 0.1f, 0.3f);
+            counter.transform.DOPunchScale(counter.transform.localScale, 0.1f);
     } 
 
     public static void RedBlinking(GameObject obj, float duration = 0.25f)
